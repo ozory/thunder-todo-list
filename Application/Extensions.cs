@@ -9,6 +9,11 @@ namespace Application.Models;
 
 public static class Extensions
 {
+    // -------------------------------------------------------------
+    // Recently I'am avoiding to use AutoMapper
+    // I saw benchmarks illustrating that is slow. So I used
+    // extension methods.
+    // -------------------------------------------------------------
     public static Todo MapToTodo(this TodoModel todoModel)
     {
         return Todo.Create(

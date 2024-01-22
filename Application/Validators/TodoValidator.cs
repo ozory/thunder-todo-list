@@ -10,6 +10,11 @@ namespace Application.Validators
 {
     public static class TodoValidator
     {
+        // -------------------------------------------------------------
+        // I prefer to use FluentValidation or others libraries to do
+        // validations, or create structures more sofisticated to do
+        // that, but, I will keep it more simple.
+        // -------------------------------------------------------------
         public static void Validate(this Todo todo, TodoModel? todoModel)
         {
             ArgumentNullException.ThrowIfNull(todo.Name, "Please input a todo item name");

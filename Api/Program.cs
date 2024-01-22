@@ -1,13 +1,15 @@
 using Application.Configurations;
-using Infrastructure;
 using Infrastructure.Configurations;
-using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+// --------------------------------------------------------
+// I prefer that every part of solution manage your ow IoC
+// --------------------------------------------------------
 builder.Services.AddInfrastructure();
 builder.Services.AddApplication();
+// --------------------------------------------------------
 builder.Services.AddControllers();
 
 builder.Services.AddEndpointsApiExplorer();
